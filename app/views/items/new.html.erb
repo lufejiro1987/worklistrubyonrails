@@ -1,0 +1,13 @@
+<h1>Nuevo item</h1>
+
+<%= form_with(model:[@list, @item], local: true) do |f| %>
+    <div>
+        <%= f.label :name, 'nombre del item'%>
+        <%= f.text_field :name %>
+    </div>
+    <div>
+        <%= f.submit 'guardar'%>
+    </div>
+<%end%>
+
+<%= link_to 'volver a la lista', list_path(@list.id)%>

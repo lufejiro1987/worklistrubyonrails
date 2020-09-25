@@ -13,7 +13,7 @@
         <% @lists.each do |list| %>
             <tr>
                 <td><%= list.name%></td>
-                <td><%= time_ago_in_words(list.created_at)%></td>
+                <td><%= list.created_at%></td>
                 <td><%= link_to 'ver tareas', list_path(list.id) %></td>
             </tr>
         <%end%>

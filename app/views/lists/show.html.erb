@@ -1,1 +1,9 @@
-<h1>Vistas</h1>
+<h1>Vista de lista de tareas</h1>
+
+<p>Nombre: <%= @list.name %></p>
+
+<h3>Items</h3>
+
+<ul>
+    <li><%= link_to 'añadir item', new_list_item_path(@list.id) %></li>
+</ul>
