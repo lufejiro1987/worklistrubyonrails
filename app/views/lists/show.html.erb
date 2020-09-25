@@ -7,6 +7,6 @@
 <ul>
     <li><%= link_to 'añadir item', new_list_item_path(@list.id) %></li>
     <% @list.items.each do |item|%>
-        <li><%=item.name%> | <%item.done ? 'lista' : 'en proceso' %><%= link_to "X", list_item_path(@list.id, item.id), method: :patch%></li>
+        <li><%=item.name%> | <%item.done ? 'lista' : 'en proceso' %><%= link_to raaw ('&#10004'), list_item_path(@list.id, item.id), method: :patch%></li>
     <%end%>
 </ul>
