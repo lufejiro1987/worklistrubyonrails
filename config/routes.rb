@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :lists
-    resources :items, only: [:new, :create]
+    resources :items, only: [:new, :create, :update]
 end
 
   root 'lists#index'
