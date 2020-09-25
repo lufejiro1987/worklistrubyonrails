@@ -1,0 +1,19 @@
+<h1>Nueva lista</h1>
+
+<%= form_with(model: @list, local: true) do |f| %>
+
+    <% if @list.errors.any? %>
+        <% @list.errors.full_messages.each do |message| %>
+            <p><%= message %></p>
+        <%end%>
+    <%end%>
+
+    <div>
+        <%= f.label :name, 'Nombre' %>
+        <%= f.text_field :name, placeholder: 'pon el nombre de la lista aqui'%>
+    </div>
+
+    <div>
+        <%= f.submit 'guardar'%>
+    </div>
+<%end%>
